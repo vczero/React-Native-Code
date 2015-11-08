@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      .height50 {
+        height: 50px;
+      }
+      .height400 {
+        height: 400px;
+      }
+      .height300 {
+        height: 300px;
+      }
+      .height200 {
+        height: 200px;
+      }
+      .height100 {
+        height: 100px;
+      }
+      .width400 {
+        width: 400px;
+      }
+      .bgred {
+        background-color: #6AC5AC;
+      }
+      .bggreen {
+        background-color:  #414142;
+      }
+      .bgyellow {
+        background-color: #D64078;
+      }
+      .box {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        position: relative;
+        color: #FDC72F;
+        line-height: 1em;
+      }
+      .label {
+        top: 0;
+        left: 0;
+        padding: 0 3px 3px 0;
+        position: absolute;
+        background-color: #FDC72F;
+        color: white;
+        line-height: 1em;
+      }
+      .top {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+      }
+      .bottom {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .right {
+        width: 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .left {
+        width: 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .heightdashed {
+        position: absolute;
+        right: 20px;
+        height: 100%;
+        border-left: 1px solid #FDC72F;
+      }
+      .widthdashed {
+        position: absolute;
+        left: 0px;
+        width: 100%;
+        bottom: 24px;
+        border-top: 1px solid #FDC72F;
+      }
+      .margginBox {
+        position: absolute;
+        top: 100px;
+        padding-left: 7px;
+        padding-right: 7px;
+      }
+      .borderBox {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+      }
+      .paddingBox {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+      }
+      .elementBox {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+      }
+      .measureBox {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script src="./build/react-with-addons-0.13.3.js"></script>
+    <script src="./build/JSXTransformer-0.13.3.js"></script>
+    <script type="text/jsx">
+      var Box = React.createClass({
+        render:function(){
+          var parentClass = "box "+this.props.width+" "+ this.props.height;
+          var topClass = "top height50 "+this.props.classBg;
+          var leftClass = "left "+this.props.classBg;
+          var rightClass = "right "+this.props.classBg;
+          var bottomClass = "bottom height50 "+this.props.classBg;
+          return (
+            <span className= {parentClass}>
+              <span className="label">{this.props.boxName}</span>
+              <span className={topClass}>top</span>
+              <span className={this.props.childName}>
+                <span className={leftClass}>left</span>
+                  {this.props.children}
+                <span className={rightClass}>right</span>
+              </span>
+              <span className={bottomClass}>bottom</span>
+            </span>
+          )
+        }
+      })
+      var MargginBox = React.createClass({
+        render:function(){
+          return (
+            <span className="margginBox">
+              <Box  childName="borderBox"  height="height400" width="width400" boxName="margin" classBg="bgred">{this.props.children}</Box>
+            </span>
+          )
+        }
+      })
+      var BorderBox = React.createClass({
+        render:function(){
+          return (
+            <Box childName="paddingBox"  height="height300" width="width300" boxName="border" classBg="bggreen" >{this.props.children}</Box>
+          )
+        }
+      })
+      var PaddingBox = React.createClass({
+        render:function(){
+          return (
+            <Box childName="elementBox"  height="height200" width="width200" boxName="padding" classBg="bgyellow" >{this.props.children}</Box>
+          )
+        }
+      })
+      var ElementBox = React.createClass({
+        render:function(){
+          return (
+            <span className="box height100  ">
+              <span className="label">element</span>
+              <span className="widthdashed"></span>
+              <span className="heightdashed"></span>
+              <span className="measureBox" >
+                <span className="right">height</span>
+              </span>
+              <span className="bottom  height50">width</span>
+            </span>
+          )
+        }
+      })
+      var BoxContainer = React.createClass({
+        render:function(){
+          return (
+            <MargginBox>
+              <BorderBox>
+                <PaddingBox>
+                  <ElementBox>
+                  </ElementBox>
+                </PaddingBox>
+              </BorderBox>
+            </MargginBox>
+          )
+        }
+      })
+      React.render(<BoxContainer/> ,document.getElementById("container"));
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      .height50 {
+        height: 50px;
+      }
+      .height400 {
+        height: 400px;
+      }
+      .height300 {
+        height: 300px;
+      }
+      .height200 {
+        height: 200px;
+      }
+      .height100 {
+        height: 100px;
+      }
+      .width400 {
+        width: 400px;
+      }
+      .bgred {
+        background-color: #6AC5AC;
+      }
+      .bggreen {
+        background-color:  #414142;
+      }
+      .bgyellow {
+        background-color: #D64078;
+      }
+      .box {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        position: relative;
+        color: #FDC72F;
+        line-height: 1em;
+      }
+      .label {
+        top: 0;
+        left: 0;
+        padding: 0 3px 3px 0;
+        position: absolute;
+        background-color: #FDC72F;
+        color: white;
+        line-height: 1em;
+      }
+      .top {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+      }
+      .bottom {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .right {
+        width: 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .left {
+        width: 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .heightdashed {
+        position: absolute;
+        right: 20px;
+        height: 100%;
+        border-left: 1px solid #FDC72F;
+      }
+      .widthdashed {
+        position: absolute;
+        left: 0px;
+        width: 100%;
+        bottom: 24px;
+        border-top: 1px solid #FDC72F;
+      }
+      .margginBox {
+        position:absolute;
+        top: 100px;
+        padding-left:7px;
+        padding-right:7px;
+      }
+      .borderBox {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+      }
+      .paddingBox {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+      }
+      .elementBox{
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+      }
+      .measureBox {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+      }
+    </style>
+  </head>
+  <body>
+    <span class="margginBox">
+      <span class="box height400  width400">
+        <span class="label">
+          margin
+        </span>
+        <span class="top height50 bgred">
+          top
+        </span>
+        <span class="borderBox">
+          <span class="left bgred">
+            left
+          </span>
+          <span class="box height300  ">
+            <span class="label">
+              border
+            </span>
+            <span class="top height50 bggreen">
+              top
+            </span>
+            <span class="paddingBox">
+              <span class="left bggreen">
+                left
+              </span>
+              <span class="box height200  ">
+                <span class="label">
+                  padding
+                </span>
+                <span class="top height50 bgyellow">
+                  top
+                </span>
+                <span class="elementBox">
+                  <span class="left bgyellow">
+                    left
+                  </span>
+                  <span class="box height100  ">
+                    <span class="label">
+                      element
+                    </span>
+                    <span class="widthdashed">
+                    </span>
+                    <span class="heightdashed">
+                    </span>
+                    <span class="measureBox">
+                      <span class="right">
+                        height
+                      </span>
+                    </span>
+                    <span class="bottom  height50">
+                      width
+                    </span>
+                  </span>
+                  <span class="right bgyellow">
+                    right
+                  </span>
+                </span>
+                <span class="bottom  height50 bgyellow">
+                  bottom
+                </span>
+              </span>
+              <span class="right bggreen">
+                right
+              </span>
+            </span>
+            <span class="bottom  height50 bggreen">
+              bottom
+            </span>
+          </span>
+          <span class="right bgred">
+            right
+          </span>
+        </span>
+        <span class="bottom  height50 bgred">
+          bottom
+        </span>
+      </span>
+    </span>
+  </body>
+</html>
