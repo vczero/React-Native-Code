@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>React第一个例子</title>
+    <script type="text/javascript" src="react.js"></script>
+    <script type="text/javascript" src="JSXTransformer.js"></script>
+</head>
+<body>
+    <div id="example"></div>
+    <script type="text/jsx">
+        var Timer = React.createClass({
+            /*初始状态*/
+            getInitialState: function() {
+                return {secondsElapsed: 0};
+            },
+            tick: function() {
+                this.setState({secondsElapsed: this.state.secondsElapsed + 1});
+            },
+            /*组件完成加载*/
+            componentDidMount: function() {
+                this.interval = setInterval(this.tick, 1000);
+            },
+            /*组件将被卸载*/
+            componentWillUnmount: function() {
+                clearInterval(this.interval);
+            },
+            render: function() {
+                return (
+                        <div>Seconds Elapsed: {this.state.secondsElapsed}</div>
+                );
+            }
+        });
+
+        React.render(<Timer />, document.getElementById('example'));
+    </script>
+</body>
+</html>

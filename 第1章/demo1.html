@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>React第一个例子</title>
+    <script type="text/javascript" src="react.js"></script>
+    <script type="text/javascript" src="JSXTransformer.js"></script>
+</head>
+<body>
+    <div id="example">
+
+    </div>
+    <script type="text/jsx">
+        var HelloMessage = React.createClass({
+            render: function() {
+                return <h1>Hello {this.props.name}!</h1>;
+            }
+        });
+        React.render(<HelloMessage name="React" />, document.getElementById('example'));
+
+    </script>
+</body>
+</html>

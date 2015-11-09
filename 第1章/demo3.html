@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>React第一个例子</title>
+    <script type="text/javascript" src="react.js"></script>
+    <script type="text/javascript" src="JSXTransformer.js"></script>
+</head>
+<body>
+<div id="example"></div>
+<script type="text/jsx">
+    var ShowEditor = React.createClass({
+        getInitialState: function() {
+            return {value: '你可以在这里输入文字'};
+        },
+        handleChange: function() {
+            this.setState({value: React.findDOMNode(this.refs.textarea).value});
+        },
+        render: function() {
+            return (
+                <div>
+                    <h3>输入</h3>
+                    <textarea style={{width:300, height:150, outline:'none'}}
+                        onChange={this.handleChange}
+                        ref="textarea"
+                        defaultValue={this.state.value} />
+                    <h3>输出</h3>
+                    <div>
+                        {this.state.value}
+                    </div>
+                </div>
+            );
+        }
+    });
+    React.render(<ShowEditor />, document.getElementById('example'));
+</script>
+</body>
+</html>

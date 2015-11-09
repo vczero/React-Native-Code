@@ -1,0 +1,258 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C2394B41BA593E40000714D /* XYPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C2394B31BA593E40000714D /* XYPieChart.m */; };
+		1C2394B71BA5943B0000714D /* XYPieChartManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C2394B61BA5943B0000714D /* XYPieChartManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1C2394831BA592E50000714D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1C2394851BA592E50000714D /* libXYPieChart.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libXYPieChart.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C2394B21BA593E40000714D /* XYPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPieChart.h; sourceTree = "<group>"; };
+		1C2394B31BA593E40000714D /* XYPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPieChart.m; sourceTree = "<group>"; };
+		1C2394B51BA5943B0000714D /* XYPieChartManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPieChartManager.h; sourceTree = "<group>"; };
+		1C2394B61BA5943B0000714D /* XYPieChartManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPieChartManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1C2394821BA592E50000714D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C23947C1BA592E50000714D = {
+			isa = PBXGroup;
+			children = (
+				1C2394B21BA593E40000714D /* XYPieChart.h */,
+				1C2394B31BA593E40000714D /* XYPieChart.m */,
+				1C2394B51BA5943B0000714D /* XYPieChartManager.h */,
+				1C2394B61BA5943B0000714D /* XYPieChartManager.m */,
+				1C2394861BA592E50000714D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1C2394861BA592E50000714D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1C2394851BA592E50000714D /* libXYPieChart.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1C2394841BA592E50000714D /* XYPieChart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C2394991BA592E50000714D /* Build configuration list for PBXNativeTarget "XYPieChart" */;
+			buildPhases = (
+				1C2394811BA592E50000714D /* Sources */,
+				1C2394821BA592E50000714D /* Frameworks */,
+				1C2394831BA592E50000714D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XYPieChart;
+			productName = XYPieChart;
+			productReference = 1C2394851BA592E50000714D /* libXYPieChart.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1C23947D1BA592E50000714D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Framework-UBT";
+				TargetAttributes = {
+					1C2394841BA592E50000714D = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = 1C2394801BA592E50000714D /* Build configuration list for PBXProject "XYPieChart" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1C23947C1BA592E50000714D;
+			productRefGroup = 1C2394861BA592E50000714D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1C2394841BA592E50000714D /* XYPieChart */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1C2394811BA592E50000714D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C2394B71BA5943B0000714D /* XYPieChartManager.m in Sources */,
+				1C2394B41BA593E40000714D /* XYPieChart.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1C2394971BA592E50000714D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1C2394981BA592E50000714D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1C23949A1BA592E50000714D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../react-native/React/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1C23949B1BA592E50000714D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../react-native/React/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1C2394801BA592E50000714D /* Build configuration list for PBXProject "XYPieChart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C2394971BA592E50000714D /* Debug */,
+				1C2394981BA592E50000714D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C2394991BA592E50000714D /* Build configuration list for PBXNativeTarget "XYPieChart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C23949A1BA592E50000714D /* Debug */,
+				1C23949B1BA592E50000714D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1C23947D1BA592E50000714D /* Project object */;
+}

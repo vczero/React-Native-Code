@@ -1,0 +1,5 @@
+{
+  "name": "react-native-xypiechart",
+  "version": "0.1",
+  "main": "./PieChart.js"
+}

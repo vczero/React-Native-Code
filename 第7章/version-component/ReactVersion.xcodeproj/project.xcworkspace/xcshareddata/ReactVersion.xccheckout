@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D5BA9C82-759F-44C2-A64D-70CEE21B5E30</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ReactVersion</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>051AFB7D2AB264CA7167FF3F69B5D39D03FA742D</key>
+		<string>https://github.com/vczero/React-Native-Code.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>第7章/version-component/ReactVersion.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>051AFB7D2AB264CA7167FF3F69B5D39D03FA742D</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/vczero/React-Native-Code.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>051AFB7D2AB264CA7167FF3F69B5D39D03FA742D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>051AFB7D2AB264CA7167FF3F69B5D39D03FA742D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>React-Native-Code</string>
+		</dict>
+	</array>
+</dict>
+</plist>

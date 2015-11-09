@@ -1,0 +1,272 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF28EAEA1BCCF11700F105DA /* ReactVersion.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BF28EAE91BCCF11700F105DA /* ReactVersion.h */; };
+		BF28EAEC1BCCF11700F105DA /* ReactVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = BF28EAEB1BCCF11700F105DA /* ReactVersion.m */; };
+		BF28EB151BCCF23500F105DA /* NSString+VersionCompare.m in Sources */ = {isa = PBXBuildFile; fileRef = BF28EB141BCCF23500F105DA /* NSString+VersionCompare.m */; };
+		BF28EB191BCCFD1C00F105DA /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = BF28EB181BCCFD1C00F105DA /* UIAlertView+Blocks.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BF28EAE41BCCF11700F105DA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				BF28EAEA1BCCF11700F105DA /* ReactVersion.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		BF28EAE61BCCF11700F105DA /* libReactVersion.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libReactVersion.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF28EAE91BCCF11700F105DA /* ReactVersion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReactVersion.h; sourceTree = "<group>"; };
+		BF28EAEB1BCCF11700F105DA /* ReactVersion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactVersion.m; sourceTree = "<group>"; };
+		BF28EB131BCCF23500F105DA /* NSString+VersionCompare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+VersionCompare.h"; sourceTree = "<group>"; };
+		BF28EB141BCCF23500F105DA /* NSString+VersionCompare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+VersionCompare.m"; sourceTree = "<group>"; };
+		BF28EB171BCCFD1C00F105DA /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
+		BF28EB181BCCFD1C00F105DA /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF28EAE31BCCF11700F105DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF28EADD1BCCF11700F105DA = {
+			isa = PBXGroup;
+			children = (
+				BF28EAE81BCCF11700F105DA /* CtripVersion */,
+				BF28EAE71BCCF11700F105DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BF28EAE71BCCF11700F105DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF28EAE61BCCF11700F105DA /* libReactVersion.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF28EAE81BCCF11700F105DA /* CtripVersion */ = {
+			isa = PBXGroup;
+			children = (
+				BF28EB171BCCFD1C00F105DA /* UIAlertView+Blocks.h */,
+				BF28EB181BCCFD1C00F105DA /* UIAlertView+Blocks.m */,
+				BF28EB131BCCF23500F105DA /* NSString+VersionCompare.h */,
+				BF28EB141BCCF23500F105DA /* NSString+VersionCompare.m */,
+				BF28EAE91BCCF11700F105DA /* ReactVersion.h */,
+				BF28EAEB1BCCF11700F105DA /* ReactVersion.m */,
+			);
+			path = CtripVersion;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF28EAE51BCCF11700F105DA /* ReactVersion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF28EAEF1BCCF11700F105DA /* Build configuration list for PBXNativeTarget "ReactVersion" */;
+			buildPhases = (
+				BF28EAE21BCCF11700F105DA /* Sources */,
+				BF28EAE31BCCF11700F105DA /* Frameworks */,
+				BF28EAE41BCCF11700F105DA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReactVersion;
+			productName = CtripVersion;
+			productReference = BF28EAE61BCCF11700F105DA /* libReactVersion.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF28EADE1BCCF11700F105DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "fx-team";
+				TargetAttributes = {
+					BF28EAE51BCCF11700F105DA = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = BF28EAE11BCCF11700F105DA /* Build configuration list for PBXProject "ReactVersion" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BF28EADD1BCCF11700F105DA;
+			productRefGroup = BF28EAE71BCCF11700F105DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF28EAE51BCCF11700F105DA /* ReactVersion */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF28EAE21BCCF11700F105DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF28EB191BCCFD1C00F105DA /* UIAlertView+Blocks.m in Sources */,
+				BF28EB151BCCF23500F105DA /* NSString+VersionCompare.m in Sources */,
+				BF28EAEC1BCCF11700F105DA /* ReactVersion.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BF28EAED1BCCF11700F105DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BF28EAEE1BCCF11700F105DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF28EAF01BCCF11700F105DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../react-native/React/**",
+					"/Users/lihua/work/github/React-Native-App/address_book/node_modules/react-native/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = ReactVersion;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		BF28EAF11BCCF11700F105DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../react-native/React/**",
+					"/Users/lihua/work/github/React-Native-App/address_book/node_modules/react-native/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = ReactVersion;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF28EAE11BCCF11700F105DA /* Build configuration list for PBXProject "ReactVersion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF28EAED1BCCF11700F105DA /* Debug */,
+				BF28EAEE1BCCF11700F105DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF28EAEF1BCCF11700F105DA /* Build configuration list for PBXNativeTarget "ReactVersion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF28EAF01BCCF11700F105DA /* Debug */,
+				BF28EAF11BCCF11700F105DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF28EADE1BCCF11700F105DA /* Project object */;
+}
