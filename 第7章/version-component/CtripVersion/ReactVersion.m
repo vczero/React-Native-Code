@@ -67,26 +67,26 @@ RCT_EXPORT_MODULE();
 #pragma mark JS Method
 
 RCT_EXPORT_METHOD(getCurrentJsVersion:(RCTPromiseResolveBlock)resolver
-                             rejecter:(RCTPromiseRejectBlock)rejecter)
+                  rejecter:(RCTPromiseRejectBlock)rejecter)
 {
     NSString *jsCodeVersion = [[NSUserDefaults standardUserDefaults] stringForKey:kCurrentReactJsCodeVersion] ?: __inAppVersion;
     
     if (jsCodeVersion) {
         resolver(jsCodeVersion);
     } else {
-        rejecter([NSError errorWithDomain:ErrorDomain code:(500) userInfo:@{NSLocalizedDescriptionKey: [NSString stringWithFormat:@"Can not get JS Version"]}]);
+        rejecter(@"500", @"Can not get JS Version", [NSError errorWithDomain:ErrorDomain code:(500) userInfo:@{NSLocalizedDescriptionKey: [NSString stringWithFormat:@"Can not get JS Version"]}]);
     }
 }
 
 
 RCT_EXPORT_METHOD(getRemoteVersion:(RCTPromiseResolveBlock)resolver
-                          rejecter:(RCTPromiseRejectBlock)rejecter)
+                  rejecter:(RCTPromiseRejectBlock)rejecter)
 {
     NSURLRequest *configRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://***/version.config"] cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:10];
     NSURLSessionTask *configTask = [__URLSession dataTaskWithRequest:configRequest completionHandler:^(NSData * data, NSURLResponse * response, NSError * error) {
         
         if (error) {
-            rejecter(error);
+            rejecter(@"500", @"Download error:request version.config failure", error);
             return;
         }
         @try {
@@ -95,7 +95,7 @@ RCT_EXPORT_METHOD(getRemoteVersion:(RCTPromiseResolveBlock)resolver
             NSDictionary *config= [NSJSONSerialization JSONObjectWithData:data options:0 error:&serilazationError];
             
             if (serilazationError) {
-                rejecter(serilazationError);
+                rejecter(@"500", @"Convert NSData to JSON failure", serilazationError);
                 return;
             }
             
@@ -103,12 +103,12 @@ RCT_EXPORT_METHOD(getRemoteVersion:(RCTPromiseResolveBlock)resolver
             if (remoteJsVersion) {
                 resolver(remoteJsVersion);
             } else {
-                rejecter([NSError errorWithDomain:ErrorDomain code:(500) userInfo:@{NSLocalizedDescriptionKey: [NSString stringWithFormat:@"Can not get JS Version"]}]);
+                rejecter(@"500", @"Can not get JS Version", [NSError errorWithDomain:ErrorDomain code:(500) userInfo:@{NSLocalizedDescriptionKey: [NSString stringWithFormat:@"Can not get JS Version"]}]);
             }
             
         }
         @catch (NSException *exception) {
-            rejecter([NSError errorWithDomain:ErrorDomain code:(500) userInfo:@{NSLocalizedDescriptionKey: exception.reason}]);
+            rejecter(@"500", exception.reason, [NSError errorWithDomain:ErrorDomain code:(500) userInfo:@{NSLocalizedDescriptionKey: exception.reason}]);
         }
         
     }];
@@ -117,8 +117,8 @@ RCT_EXPORT_METHOD(getRemoteVersion:(RCTPromiseResolveBlock)resolver
 
 
 RCT_EXPORT_METHOD(updateVersion:(NSDictionary *)config
-                       resolver:(RCTPromiseResolveBlock)resolver
-                       rejecter:(RCTPromiseRejectBlock)rejecter)
+                  resolver:(RCTPromiseResolveBlock)resolver
+                  rejecter:(RCTPromiseRejectBlock)rejecter)
 {
     
     @try {
@@ -133,7 +133,7 @@ RCT_EXPORT_METHOD(updateVersion:(NSDictionary *)config
                 
                 if (error || !location) {
                     RCTLogWarn(@"Download error. %@",[error description]);
-                    rejecter(error);
+                    rejecter(@"500", [@"Download error! please check your server:%@" stringByAppendingString:request.URL.absoluteString], error);
                     return;
                 }
                 
@@ -146,21 +146,21 @@ RCT_EXPORT_METHOD(updateVersion:(NSDictionary *)config
                     RCTLogInfo(@"Update Js Code success");
                     resolver(remoteJsVersion);
                 } else {
-                    rejecter(ioError);
+                    rejecter(@"500", [NSString stringWithFormat:@"Copies the item at the %@ to %@ failure", [location resourceSpecifier], [ReactVersion pathForVersion:remoteJsVersion]], ioError);
                 }
                 
             }];
             [downloadTask resume];
             
         } else {
-            rejecter([NSError errorWithDomain:ErrorDomain code:(500) userInfo:@{NSLocalizedDescriptionKey: @"don't need update"}]);
+            rejecter(@"500", @"don't need update", [NSError errorWithDomain:ErrorDomain code:(500) userInfo:@{NSLocalizedDescriptionKey: @"don't need update"}]);
         }
         
     }
     @catch (NSException *exception) {
-        rejecter([NSError errorWithDomain:ErrorDomain code:(500) userInfo:@{NSLocalizedDescriptionKey: exception.reason}]);
+        rejecter(@"500", exception.reason, [NSError errorWithDomain:ErrorDomain code:(500) userInfo:@{NSLocalizedDescriptionKey: exception.reason}]);
     }
-   
+    
     
 }
 
@@ -178,13 +178,13 @@ RCT_EXPORT_METHOD(reloadVersion:(NSString *)version
     }
     
     if (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
-        rejecter([NSError errorWithDomain:ErrorDomain code:(500) userInfo:@{NSLocalizedDescriptionKey: @"no file exists"}]);
+        rejecter(@"500", @"no file exists", [NSError errorWithDomain:ErrorDomain code:(500) userInfo:@{NSLocalizedDescriptionKey: @"no file exists"}]);
         return;
     }
-
+    
     self.bridge.bundleURL = [NSURL fileURLWithPath:path];
     [self.bridge reload];
-   
+    
 }
 
 #pragma -

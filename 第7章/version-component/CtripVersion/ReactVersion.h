@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RCTBridge.h"
+#import "RCTBridge+Private.h"
 
 @interface ReactVersion : NSObject<RCTBridgeModule>
 
